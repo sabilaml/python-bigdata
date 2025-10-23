@@ -1,11 +1,6 @@
-# ==========================================
 # Nama  : Sabila Marista Losya
-# NRP   : 31122024
-# Kelas : Teknik Informatika (Sore)
-# Mata Kuliah : Data Mining
-# UTS Gasal 2025/2026
+# Kelas : Teknik Informatika
 # Soal No 3 - Pemilihan Universitas Menggunakan AHP
-# ==========================================
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -66,5 +61,6 @@ for bar in bars:
 plt.tight_layout()
 plt.savefig('hasil_ahp_universitas.png', dpi=300)
 plt.show()
+
 
 print("\nVisualisasi disimpan sebagai: hasil_ahp_universitas.png")
