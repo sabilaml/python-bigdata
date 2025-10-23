@@ -135,7 +135,7 @@ Hasil & Analisis
 Output terminal menampilkan tabel total skor setiap universitas dan universitas terbaik:
 
 === HASIL ANALISA AHP ===
-     Universitas   Total Skor
+Universitas   Total Skor
 0  Widya Kartika     0.9111
 1  ITATS             0.8600
 2  Dharma Cendika    0.7000
