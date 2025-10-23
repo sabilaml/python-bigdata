@@ -1,4 +1,4 @@
-# Klasifikasi Risiko Diabetes Berdasarkan Gaya Hidup
+# Soal No.1 Klasifikasi Risiko Diabetes Berdasarkan Gaya Hidup
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier, plot_tree
@@ -72,4 +72,5 @@ Dari visualisasi terlihat:
 - Semua pasien dengan riwayat keluarga -> Risiko Tinggi.
 - Semua pasien tanpa riwayat keluarga -> Risiko Rendah.
 ----------------------------------
+
 """)
