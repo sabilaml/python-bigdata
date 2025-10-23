@@ -1,11 +1,6 @@
-# ==========================================
 # Nama  : Sabila Marista Losya
-# NRP   : 31122024
 # Kelas : Teknik Informatika (Sore)
-# Mata Kuliah : Data Mining
-# UTS Gasal 2025/2026
 # Soal No 2 - Prediksi Pola Gejala Penyakit (Apriori)
-# ==========================================
 
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
@@ -64,4 +59,5 @@ for bar, conf in zip(bars, top_rules['confidence']):
 
 plt.tight_layout()
 plt.savefig('pola_gejala_apriori.png', dpi=300)
+
 plt.show()
