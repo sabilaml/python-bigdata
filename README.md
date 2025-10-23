@@ -2,15 +2,15 @@
 Repository ini berisi tiga analisis utama menggunakan Python sebagai bagian dari tugas UTS Data Mining.
 Setiap file Python mewakili satu soal berbeda dengan metode data mining yang digunakan untuk klasifikasi, asosiasi, dan pengambilan keputusan.
 
-👩‍🎓 Nama: Sabila Marista Losya
-🏫 Program Studi: Teknik Informatika
+Nama: Sabila Marista Losya
+Program Studi: Teknik Informatika
 
-📘 1️⃣ Klasifikasi Risiko Diabetes Berdasarkan Gaya Hidup
+Klasifikasi Risiko Diabetes Berdasarkan Gaya Hidup
 
 File: Klasifikasi_Diabetes.py
 Metode: Decision Tree Classifier (Scikit-learn)
 
-🧩 Deskripsi
+Deskripsi
 
 Program ini menganalisis data pasien untuk memprediksi risiko diabetes (Tinggi/Rendah) berdasarkan faktor-faktor gaya hidup seperti:
 
@@ -26,7 +26,7 @@ Riwayat Keluarga
 
 Tekanan Darah
 
-⚙️ Cara Menjalankan
+Cara Menjalankan
 
 Pastikan sudah menginstal dependensi:
 
@@ -37,7 +37,7 @@ Jalankan program:
 
 python Klasifikasi_Diabetes.py
 
-📊 Hasil & Analisis
+Hasil & Analisis
 
 Menampilkan hasil prediksi risiko pasien baru:
 Prediksi Risiko Diabetes: Tinggi
@@ -53,18 +53,18 @@ Pasien dengan riwayat keluarga diabetes → Risiko Tinggi
 
 Tanpa riwayat keluarga → Risiko Rendah
 
-🩺 2️⃣ Prediksi Pola Gejala Penyakit (Apriori)
+Prediksi Pola Gejala Penyakit (Apriori)
 
 File: Apriori_GejalaPenyakit.py
 Metode: Association Rule Mining (Apriori – mlxtend)
 
-🧩 Deskripsi
+Deskripsi
 
 Analisis ini bertujuan untuk menemukan pola keterkaitan antar-gejala penyakit dari data 20 pasien.
 Beberapa gejala yang digunakan antara lain:
 Demam, Batuk, Sesak Napas, Nyeri Sendi, Kelelahan, Sakit Tenggorokan, Sakit Kepala.
 
-⚙️ Cara Menjalankan
+Cara Menjalankan
 
 Instal library:
 
@@ -75,7 +75,7 @@ Jalankan program:
 
 python Apriori_GejalaPenyakit.py
 
-📊 Hasil & Analisis
+Hasil & Analisis
 
 Program menghasilkan aturan asosiasi dengan nilai support ≥ 25% dan confidence ≥ 60%, misalnya:
 
@@ -85,7 +85,7 @@ Program menghasilkan aturan asosiasi dengan nilai support ≥ 25% dan confidence
 
 Artinya, pasien yang mengalami batuk dan sesak napas hampir selalu mengalami demam.
 
-📈 Visualisasi disimpan sebagai pola_gejala_apriori.png, menampilkan:
+Visualisasi disimpan sebagai pola_gejala_apriori.png, menampilkan:
 
 Grafik batang horizontal (horizontal bar chart)
 
@@ -97,12 +97,12 @@ Gejala Demam sering muncul bersamaan dengan gejala lain.
 
 Pola ini bisa membantu klinik mengenali penyakit pernapasan seperti flu berat atau COVID-like symptoms.
 
-🎓 3️⃣ Pemilihan Universitas Terbaik dengan AHP
+Pemilihan Universitas Terbaik dengan AHP
 
 File: ahp_universitas.py
 Metode: Analytic Hierarchy Process (AHP)
 
-🧩 Deskripsi
+Deskripsi
 
 Program ini digunakan untuk membantu memilih universitas terbaik berdasarkan tiga faktor utama:
 
@@ -119,7 +119,7 @@ Widya Kartika
 
 ITATS
 
-⚙️ Cara Menjalankan
+Cara Menjalankan
 
 Instal library:
 
@@ -130,7 +130,7 @@ Jalankan program:
 
 python ahp_universitas.py
 
-📊 Hasil & Analisis
+Hasil & Analisis
 
 Output terminal menampilkan tabel total skor setiap universitas dan universitas terbaik:
 
@@ -143,7 +143,7 @@ Output terminal menampilkan tabel total skor setiap universitas dan universitas 
 Universitas dengan skor tertinggi adalah: Widya Kartika
 
 
-📈 Visualisasi hasil_ahp_universitas.png menampilkan grafik batang hasil perbandingan skor total.
+Visualisasi hasil_ahp_universitas.png menampilkan grafik batang hasil perbandingan skor total.
 
 Interpretasi:
 
@@ -151,7 +151,7 @@ Widya Kartika mendapat nilai tertinggi secara keseluruhan.
 
 Faktor biaya kuliah dan reputasi berpengaruh paling besar terhadap keputusan akhir.
 
-⚙️ Requirements
+Requirements
 
 Buat file requirements.txt berisi:
 
@@ -165,12 +165,12 @@ Instal semua library dengan:
 
 pip install -r requirements.txt
 
-💾 Output yang Dihasilkan
+Output yang Dihasilkan
 File Output	Deskripsi
 pohon_keputusan_diabetes.png	Visualisasi pohon keputusan risiko diabetes
 pola_gejala_apriori.png	Grafik asosiasi antar gejala penyakit
 hasil_ahp_universitas.png	Grafik perbandingan skor universitas (AHP)
-📎 Catatan
+Catatan
 
 Semua analisis dibuat menggunakan Python 3 dan library umum (tidak memerlukan koneksi database).
 Setiap script bisa dijalankan secara independen, dan hasil visualisasi otomatis tersimpan di folder yang sama dengan file Python.
