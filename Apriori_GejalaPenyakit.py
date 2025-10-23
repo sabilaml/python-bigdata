@@ -1,12 +1,10 @@
-# Nama  : Sabila Marista Losya
-# Kelas : Teknik Informatika (Sore)
 # Soal No 2 - Prediksi Pola Gejala Penyakit (Apriori)
 
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 import matplotlib.pyplot as plt
 
-# === Dataset pasien dan gejalanya ===
+# Dataset pasien dan gejalanya
 data = {
     'P001': ['Demam','Batuk','Sesak Napas'],
     'P002': ['Nyeri Sendi','Kelelahan','Demam'],
@@ -30,21 +28,19 @@ data = {
     'P020': ['Nyeri Sendi','Demam','Kelelahan']
 }
 
-# === Ubah ke format transaksi ===
+# format transaksi
 gejala_list = ['Demam','Batuk','Sesak Napas','Nyeri Sendi','Kelelahan','Sakit Tenggorokan','Sakit Kepala']
 df = pd.DataFrame([{g: (g in v) for g in gejala_list} for v in data.values()])
 
-# === Jalankan Apriori dan Association Rules ===
+# Apriori dan Association Rules
 frequent_itemsets = apriori(df, min_support=0.25, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.6)
 
-# Urutkan agar hasil sama dengan tabel final
 rules = rules.sort_values(by=['support','confidence'], ascending=[False, False])
 
-# Cetak hasil utama
 print(rules[['antecedents','consequents','support','confidence','lift']])
 
-# === Visualisasi dengan nilai di ujung batang ===
+# visual
 top_rules = rules.head(8)
 plt.figure(figsize=(10,6))
 labels = top_rules.apply(lambda x: ', '.join(list(x['antecedents'])) + " → " + ', '.join(list(x['consequents'])), axis=1)
@@ -53,7 +49,7 @@ plt.xlabel('Confidence')
 plt.title('Pola Gejala Penyakit dengan Confidence Tertinggi')
 plt.gca().invert_yaxis()
 
-# Tambahkan nilai confidence di ujung batang
+# nilai confidence
 for bar, conf in zip(bars, top_rules['confidence']):
     plt.text(bar.get_width() + 0.01, bar.get_y() + bar.get_height()/2, f"{conf:.2f}", va='center', fontsize=9, color='black')
 
@@ -61,3 +57,4 @@ plt.tight_layout()
 plt.savefig('pola_gejala_apriori.png', dpi=300)
 
 plt.show()
+
